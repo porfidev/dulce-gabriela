@@ -1,11 +1,21 @@
 ---
+const currentPath = Astro.url.pathname;
 
+const links = [
+    { label: 'Inicio', href: '/' },
+    { label: 'Habilidades', href: '/skills' },
+    { label: 'Portafolio', href: '/portfolio' },
+    { label: 'Contacto', href: '/contact' },
+];
 ---
 <ul class="navigation-menu">
-    <li class="navigation-item"><a href="/">Inicio</a></li>
-    <li class="navigation-item"><a href="skills">Habilidades</a></li>
-    <li class="navigation-item"><a href="portfolio">Portafolio</a></li>
-    <li class="navigation-item"><a href="contact">Contacto</a></li>
+    {links.map((link) => (
+      <li class:list={['navigation-item', { active: link.href === '/'
+            ? currentPath === '/'
+            : currentPath.startsWith(link.href)}]}>
+          <a href={link.href}>{link.label}</a>
+      </li>
+    ))}
 </ul>
 
 <style>
@@ -39,7 +49,8 @@
         cursor: pointer;
     }
 
-    .navigation-item:hover {
+    .navigation-item:hover,
+    .navigation-item.active{
         background-color: rgba(154, 122, 192, 1);
         border-radius: 10px;
         color: rgba(255, 255, 255, 1);
