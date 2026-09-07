@@ -6,15 +6,50 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src: url('/fonts/BeVietnamPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src: url('/fonts/BeVietnamPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('/fonts/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #F7D6D0;
+    background-color: rgba(121, 23, 136, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100dvh;
 }
 
-h1 {
-    font-family: 'Borel', sans-serif;
-    color: #4A4A4A;
+.main-content {
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    width: 1341px;
+    height: 852px;
+    border-radius: 62px;
+
+    overflow: hidden;
 }
