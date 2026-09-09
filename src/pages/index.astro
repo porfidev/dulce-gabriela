@@ -11,6 +11,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		</div>
 	</div>
 
+	<div class="design-icons">
+		<img src="/images/ai.png" />
+		<img src="/images/ps.png" />
+		<img src="/images/figma.png" />
+	</div>
+
 	<img class="image-photo" src="/images/gaby2.webp" />
 	<div class="circulo-gradiente"></div>
 
@@ -65,6 +71,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		font-size: 64px;
 		color: rgba(181, 62, 211, 1);
 		line-height: 1;
+	}
+
+	.design-icons {
+		position: absolute;
+		top: 408px;
+		left: 718px;
+		display: flex;
+		flex-direction: row;
+		column-gap: 24px;
 	}
 
 	.image-photo {
