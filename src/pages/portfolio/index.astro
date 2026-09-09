@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+
+const proyectos = [
+  { titulo: 'Book Beau', imagen: '/images/bookbeau.jpg' },
+  { titulo: 'Puffin Drinkwear', imagen: '/images/puffin.jpg' },
+  { titulo: 'Ilusión', imagen: '/images/ilusion.jpg' },
+  { titulo: 'Otros proyectos', imagen: '/images/otros.jpg' },
+  { titulo: 'Páginas web', imagen: '/images/web.jpg' },
+  { titulo: 'IA', imagen: '/images/portia.jpg' },
+];
+---
+<BaseLayout>
+    <SectionTitle title="portafolio" />
+    <main class="portfolio">
+        <section class="portfolio-grid" aria-label="Proyectos">
+          {proyectos.map((proyecto) => (
+                  <a class="portfolio-card" href="#">
+                      <div class="portfolio-card__image">
+                          <img src={proyecto.imagen} alt={proyecto.titulo} />
+                      </div>
+                      <h2>{proyecto.titulo}</h2>
+                  </a>
+          ))}
+        </section>
+    </main>
+</BaseLayout>
+
+<style>
+    .portfolio {
+        position: absolute;
+        top: 190px;
+        height: 100%;
+        padding: 0 62px;
+        overflow-y: auto;
+    }
+
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 64px 42px;
+    }
+
+    .portfolio-card {
+        grid-column: span 3;
+        color: #000;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .portfolio-card__image {
+        aspect-ratio: 1;
+        transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .portfolio-card img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .portfolio-card h2 {
+        margin: 22px 0 0;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(2rem, 2.3vw, 2.8rem);
+        font-weight: 400;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    .portfolio-card:hover .portfolio-card__image {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 0 rgba(155, 122, 189, 0.22);
+    }
+
+    .portfolio-card:nth-child(5) {
+        grid-column: 4 / span 3;
+    }
+
+    .portfolio-card:nth-child(6) {
+        grid-column: 7 / span 3;
+    }
+
+
+    @media (max-width: 900px) {
+        .portfolio {
+            padding: 42px 32px;
+        }
+
+        .portfolio-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 42px 24px;
+        }
+
+        .portfolio-card,
+        .portfolio-card:nth-child(5),
+        .portfolio-card:nth-child(6) {
+            grid-column: auto;
+        }
+    }
+
+    @media (max-width: 520px) {
+        .portfolio-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
