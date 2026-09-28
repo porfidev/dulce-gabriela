@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionTitle from '../../../components/SectionTitle.astro';
+import InnerNavigation from '../../../components/InnerNavigation.astro';
+
+import image1 from './images/b1.webp';
+import image2 from './images/b2.webp';
+---
+
+<BaseLayout>
+    <SectionTitle title="portafolio" subtitle="book beau" />
+
+    <InnerNavigation
+            prevLink="/portfolio/book-beau/pillows"
+            nextLink="/portfolio/puffin-drinkwear"
+    />
+
+    <img src={image1.src} class="image1">
+    <p class="description-text text1">
+        Desarrollo de mock ups de nuevos productos como tote bags y nintendo case siguiendo los lineamientos de la marca.
+    </p>
+    <img src={image2.src} class="image2">
+
+
+</BaseLayout>
+
+
+<style>
+    .image1, .image2, .image3 {
+        position: absolute;
+    }
+
+    .image1 {
+        left: 117px;
+        top: 223px;
+    }
+
+    .image2 {
+        left: 549px;
+        top: 143px;
+        z-index: 0;
+    }
+
+    p.description-text {
+        position: absolute;
+        text-align: center;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .text1 {
+        width: 336px;
+        height: 45px;
+        left: 151px;
+        top: 730px;
+    }
+</style>

@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionTitle from '../../../components/SectionTitle.astro';
+import InnerNavigation from '../../../components/InnerNavigation.astro';
+
+import image1 from './images/bs1.webp';
+import image2 from './images/bs2.webp';
+import image3 from './images/bs3.webp';
+---
+
+<BaseLayout>
+    <SectionTitle title="portafolio" subtitle="book beau" />
+
+    <InnerNavigation
+      prevLink="/portfolio/book-beau/"
+      nextLink="/portfolio/book-beau/pillows"
+    />
+
+    <img src={image1.src} class="image1">
+    <p class="description-text text1">
+        Realización de muestras para fotografía de producto y contenido para e-commerce, seleccionando la combinación de cierres (zippers) e hilos más adecuada para los diseños y estampados, manteniendo la coherencia con la identidad visual de la marca.
+    </p>
+
+    <img src={image2.src} class="image2">
+    <p class="description-text text2">
+        Responsable de adaptar cada diseño de la marca a los distintos tamaños y modelos de fundas (Bebe, Mini, Indie, XL y Jumbeau), realizando los ajustes necesarios en composición, escala y ubicación de los elementos para garantizar un resultado visual consistente y listo para producción.
+    </p>
+    <img src={image3.src} class="image3">
+</BaseLayout>
+
+<style>
+    .image1, .image2, .image3 {
+        position: absolute;
+    }
+
+    .image1 {
+        left: 60px;
+        top: 237px;
+    }
+
+    .image2 {
+        left: 410px;
+        top: 290px;
+    }
+
+    .image3 {
+        left: 980px;
+        top: 270px;
+    }
+
+    p.description-text {
+        position: absolute;
+        text-align: center;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .text1 {
+        width: 362px;
+        height: 75px;
+        left: 40px;
+        top: 660px;
+    }
+
+    .text2 {
+        width: 423px;
+        height: 85px;
+        left: 472px;
+        top: 570px;
+    }
+</style>

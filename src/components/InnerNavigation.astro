@@ -1,0 +1,44 @@
+---
+type Props = {
+  prevLink: string;
+  nextLink: string
+}
+
+const { prevLink, nextLink } = Astro.props;
+---
+
+<nav aria-label="navegacion portafolio" class="nav-wrapper">
+    <a href={prevLink} rel="prev" class="inner-navigation-button">
+        <img src="/images/arrow_prev.svg"/>
+    </a>
+
+    <a href={nextLink} rel="next" class="inner-navigation-button">
+        <img src="/images/arrow_next.svg"/>
+    </a>
+</nav>
+
+<style>
+    .nav-wrapper {
+        position: absolute;
+        top: 149px;
+        right: 116px;
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+        z-index: 1;
+    }
+
+    .inner-navigation-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: rgba(154, 122, 192, 0.5);
+    }
+
+    .inner-navigation-button:hover {
+        background-color: rgba(154, 122, 192, 1);
+    }
+</style>

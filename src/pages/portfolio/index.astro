@@ -3,9 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SectionTitle from '../../components/SectionTitle.astro';
 
 const proyectos = [
-  { titulo: 'Book Beau', imagen: '/images/bookbeau.jpg' },
-  { titulo: 'Puffin Drinkwear', imagen: '/images/puffin.jpg' },
-  { titulo: 'Ilusión', imagen: '/images/ilusion.jpg' },
+  { titulo: 'Book Beau', imagen: '/images/bookbeau.jpg', url: '/portfolio/book-beau' },
+  { titulo: 'Puffin Drinkwear', imagen: '/images/puffin.jpg', url: '/portfolio/puffin-drinkwear' },
+  { titulo: 'Ilusión', imagen: '/images/ilusion.jpg', url: '/portfolio/ilusion' },
   { titulo: 'Otros proyectos', imagen: '/images/otros.jpg' },
   { titulo: 'Páginas web', imagen: '/images/web.jpg' },
   { titulo: 'IA', imagen: '/images/portia.jpg' },
@@ -16,7 +16,7 @@ const proyectos = [
     <main class="portfolio">
         <section class="portfolio-grid" aria-label="Proyectos">
           {proyectos.map((proyecto) => (
-                  <a class="portfolio-card" href="#">
+                  <a class="portfolio-card" href={proyecto.url}>
                       <div class="portfolio-card__image">
                           <img src={proyecto.imagen} alt={proyecto.titulo} />
                       </div>

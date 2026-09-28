@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionTitle from '../../../components/SectionTitle.astro';
+
+import mainPhoto from './images/main_beau.webp';
+import portalibros from './images/portalibros.webp';
+import fichas from './images/fichas.webp';
+import ShowProjectButton from '../../../components/ShowProjectButton.astro';
+---
+
+<BaseLayout>
+    <SectionTitle title="portafolio" subtitle="book beau" />
+
+    <div class="submenu-wrapper">
+        <ShowProjectButton link="/portfolio/book-beau/bookshell/" />
+    </div>
+
+    <section class="portfolio-section-content">
+        <h3>Book beau</h3>
+
+        <p>
+            Marca estadounidense especializada en fundas protectoras para libros, enfocada en combinar funcionalidad con diseños creativos para lectores.
+        </p>
+
+        <p><strong>Mi participación</strong></p>
+
+        <ul>
+            <li>Diseño de ilustraciones, patrones y estampados.</li>
+            <li>Adaptación de artes a los distintos tamaños de fundas (Bebe, Mini, Indie, XL y Jumbeau).</li>
+            <li>Preparación de archivos finales para impresión y producción.</li>
+            <li>Coordinación con las muestristas para el desarrollo y validación de prototipos.</li>
+        </ul>
+
+        <ul>
+            <li><strong>Año 2020–2026</strong></li>
+            <li>Herramientas: Illustrator, Photoshop, RasterLink</li>
+        </ul>
+    </section>
+    <img class="image-photo" src={mainPhoto.src} />
+    <img class="fichas-image" src={fichas.src} />
+    <img class="portalibros-image" src={portalibros.src} />
+</BaseLayout>
+
+
+<style>
+    .image-photo {
+        position: absolute;
+        bottom: 0;
+        border-bottom-left-radius: 62px;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .fichas-image {
+        position: absolute;
+        top: 495px;
+        left: 574px;
+        pointer-events: none;
+    }
+
+    .portalibros-image {
+        position: absolute;
+        top: 229px;
+        left: 954px;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .portfolio-section-content {
+        position: absolute;
+        width: 389px;
+        height: 270px;
+        top: 157px;
+        left: 574px;
+
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    .submenu-wrapper {
+        position: absolute;
+        right: 25px;
+        top: 150px;
+    }
+</style>

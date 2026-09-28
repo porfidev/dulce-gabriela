@@ -1,9 +1,22 @@
 ---
 import '../pages/index.styles.css';
-const { title } = Astro.props;
+
+type Props = {
+    title: string;
+    subtitle?: string;
+}
+
+const { title, subtitle } = Astro.props;
 ---
 <div class="section-title">
     <span class="section-title-text">{title}</span>
+
+    {subtitle &&
+      <div class="section-subtitle">
+        <img src="/images/subtitle_arrow.svg" class="subtitle-arrow"/>
+        <span class="section-subtitle-text">{subtitle}</span>
+    </div>
+    }
 </div>
 
 <style>
@@ -24,6 +37,8 @@ const { title } = Astro.props;
         flex-direction: column;
         justify-content: center;
         z-index: 2;
+
+        overflow: visible;
     }
 
     .section-title-text {
@@ -32,5 +47,25 @@ const { title } = Astro.props;
         font-size: 54px;
         color: #B53ED3;
         line-height: 1;
+    }
+
+    .section-subtitle {
+        position: absolute;
+        height: 47px;
+        top: 80px;
+        left: 80px;
+        width: 260px;
+    }
+    .section-subtitle-text {
+        font-family: 'Bebas Neue', sans-serif;
+        font-weight: 400;
+        font-size: 32px;
+        color: #000000;
+    }
+
+    .subtitle-arrow {
+        width: 54px;
+        height: 47px;
+        margin-right: 10px;
     }
 </style>
