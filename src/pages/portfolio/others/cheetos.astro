@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionTitle from '../../../components/SectionTitle.astro';
+import InnerNavigation from '../../../components/InnerNavigation.astro';
+
+import image1 from './images/cheetos1.webp';
+import image2 from './images/cheetos2.webp';
+import image3 from './images/cheetos3.webp';
+---
+
+<BaseLayout>
+    <SectionTitle title="portafolio" subtitle="cheetos" />
+
+    <InnerNavigation
+            prevLink="/portfolio/others/clothes2/"
+            nextLink="/portfolio/others/lion-king/"
+    />
+
+    <section class="portfolio-section-content">
+        <h4>CHEETOS</h4>
+        <p>
+            Con esta marca  elaboré el diseño y adaptación de estampados para diferentes
+            formatos de producto, cuidando la distribución de los elementos gráficos y su
+            correcta aplicación en cada pieza.
+        </p>
+    </section>
+
+    <img class="image1" src={image1.src} />
+    <img class="image2" src={image2.src} />
+    <img class="image3" src={image3.src} />
+</BaseLayout>
+
+<style>
+    .portfolio-section-content {
+        position: absolute;
+        width: 414px;
+        height: 90px;
+        top: 299px;
+        right: 80px;
+
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    [class^="image"] {
+        position: absolute;
+    }
+
+    .image1 {
+        left: 69px;
+        bottom: 29px;
+    }
+
+    .image2 {
+        bottom: 231px;
+        right: 172px;
+    }
+
+    .image3 {
+        bottom: 50px;
+        right: 172px;
+    }
+</style>

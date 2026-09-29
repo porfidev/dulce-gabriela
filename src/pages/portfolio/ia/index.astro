@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionTitle from '../../../components/SectionTitle.astro';
+import InnerNavigation from '../../../components/InnerNavigation.astro';
+
+import image1 from './images/ia1.webp';
+import image2 from './images/ia2.webp';
+---
+
+<BaseLayout>
+    <SectionTitle title="portafolio" subtitle="Proyectos IA" />
+
+    <InnerNavigation
+            nextLink="/portfolio/ia/mundial/"
+    />
+
+    <section class="portfolio-section-content">
+        <p>
+            Desarrollo de productos mediante Inteligencia Artificial, desde la conceptualización y creación visual hasta su materialización. Diseño de peluches y mascotas de marca para empresas, escuelas y proyectos, desarrollando cada propuesta de principio a fin y cuidando su identidad, detalles y aplicación final.        </p>
+    </section>
+
+    <img class="image1" src={image1.src} />
+    <img class="image2" src={image2.src} />
+</BaseLayout>
+
+<style>
+    .portfolio-section-content {
+        position: absolute;
+        width: 536px;
+        height: 105px;
+        left: 403px;
+        top: 237px;
+
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+
+        text-align: center;
+
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    [class^="image"] {
+        position: absolute;
+    }
+
+    .image1 {
+        left: 62px;
+        bottom: 59px;
+    }
+
+    .image2 {
+        right: 47px;
+        bottom: 59px;
+    }
+</style>

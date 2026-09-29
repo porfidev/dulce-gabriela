@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionTitle from '../../../components/SectionTitle.astro';
+import InnerNavigation from '../../../components/InnerNavigation.astro';
+
+import image1 from './images/webpages21.webp';
+import image2 from './images/webpages22.webp';
+---
+
+<BaseLayout>
+    <SectionTitle title="portafolio" subtitle="Páginas web" />
+
+    <InnerNavigation
+            prevLink="/portfolio/webpages/"
+            nextLink="/portfolio/ia/"
+    />
+
+    <section class="portfolio-section-content">
+        <p>
+            Aqui realizaba la toma fotográfica de los productos para agregarlos a la página, el dseño de los banners y actualización de los mismos asi como el mantenimiento actualizado de nuevos productos.        </p>
+    </section>
+
+    <img class="image1" src={image1.src} />
+    <img class="image2" src={image2.src} />
+</BaseLayout>
+
+<style>
+    .portfolio-section-content {
+        position: absolute;
+        width: 403px;
+        height: 105px;
+        right: 225px;
+        top: 465px;
+
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+
+        text-align: center;
+        z-index: 2;
+
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    [class^="image"] {
+        position: absolute;
+    }
+
+    .image1 {
+        left: 142px;
+        bottom: 30px;
+    }
+
+    .image2 {
+        bottom: 10px;
+        right: 52px;
+    }
+</style>

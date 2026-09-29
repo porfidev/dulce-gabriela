@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionTitle from '../../../components/SectionTitle.astro';
+import InnerNavigation from '../../../components/InnerNavigation.astro';
+
+import image1 from './images/webpages1.webp';
+import image2 from './images/webpages2.webp';
+---
+
+<BaseLayout>
+    <SectionTitle title="portafolio" subtitle="Páginas web" />
+
+    <InnerNavigation
+            nextLink="/portfolio/webpages/textil-web/"
+    />
+
+    <section class="portfolio-section-content">
+        <p>
+            Con esta empresa realizaba la gestión de contenido para    e-commerce, incluyendo carga y actualización de productos, diseño de banners y elementos gráficos para páginas web, así como mantenimiento de la presentación visual de la tienda en línea de acuerdo con la identidad de la marca.
+        </p>
+    </section>
+
+    <img class="image1" src={image1.src} />
+    <img class="image2" src={image2.src} />
+</BaseLayout>
+
+<style>
+    .portfolio-section-content {
+        position: absolute;
+        width: 403px;
+        height: 105px;
+        left: 132px;
+        top: 341px;
+
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+
+        text-align: center;
+
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    [class^="image"] {
+        position: absolute;
+    }
+
+    .image1 {
+        left: 46px;
+        bottom: 41px;
+    }
+
+    .image2 {
+        top: 235px;
+        right: 53px;
+    }
+</style>

@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionTitle from '../../../components/SectionTitle.astro';
+import InnerNavigation from '../../../components/InnerNavigation.astro';
+
+import image1 from './images/clothes21.webp';
+import image2 from './images/clothes22.webp';
+import image3 from './images/clothes23.webp';
+---
+
+<BaseLayout>
+    <SectionTitle title="portafolio" subtitle="prendas de vestir" />
+
+    <InnerNavigation
+            prevLink="/portfolio/others/clothes/"
+            nextLink="/portfolio/others/cheetos/"
+    />
+
+    <section class="portfolio-section-content">
+        <p>
+            Desarrollo de fichas técnicas , diseño de etiquetas para las prendas y ajuste de archivos para impresión         </p>
+    </section>
+
+    <img class="image1" src={image1.src} />
+    <img class="image2" src={image2.src} />
+    <img class="image3" src={image3.src} />
+</BaseLayout>
+
+<style>
+    .portfolio-section-content {
+        position: absolute;
+        width: 414px;
+        height: 90px;
+        left: 190px;
+        bottom: 60px;
+
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    [class^="image"] {
+        position: absolute;
+    }
+
+    .image1 {
+        left: 79px;
+        top: 253px;
+    }
+
+    .image2 {
+        top: 285px;
+        right: 155px;
+    }
+
+    .image3 {
+        right: 92px;
+        bottom: 38px;
+    }
+</style>

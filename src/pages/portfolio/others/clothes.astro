@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionTitle from '../../../components/SectionTitle.astro';
+import InnerNavigation from '../../../components/InnerNavigation.astro';
+
+import image1 from './images/clothes1.webp';
+import image2 from './images/clothes2.webp';
+---
+
+<BaseLayout>
+    <SectionTitle title="portafolio" subtitle="prendas de vestir" />
+
+    <InnerNavigation
+            prevLink="/portfolio/others/"
+            nextLink="/portfolio/others/clothes2/"
+    />
+
+    <section class="portfolio-section-content">
+        <p>
+            Dominio en el desarrollo de artes para prendas de vestir y su adaptación a toda la corrida de tallas, realizando ajustes de escala, proporciones y áreas de aplicación para su correcta producción.
+        </p>
+    </section>
+
+    <img class="image1" src={image1.src} />
+    <img class="image2" src={image2.src} />
+</BaseLayout>
+
+<style>
+    .portfolio-section-content {
+        position: absolute;
+        width: 414px;
+        height: 90px;
+        top: 264px;
+        right: 75px;
+
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    [class^="image"] {
+        position: absolute;
+    }
+
+    .image1 {
+        left: 21px;
+        top: 215px;
+    }
+
+    .image2 {
+        right: 39px;
+        bottom: 139px;
+    }
+</style>

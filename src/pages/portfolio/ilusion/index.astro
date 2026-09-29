@@ -1,9 +1,76 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import SectionTitle from '../../../components/SectionTitle.astro';
+import ShowProjectButton from '../../../components/ShowProjectButton.astro';
+
+import mainPhoto from './images/main.webp';
+import image1 from './images/main1.webp';
 ---
 
 <BaseLayout>
     <SectionTitle title="portafolio" subtitle="ilusión" />
 
+
+    <div class="submenu-wrapper">
+        <ShowProjectButton link="/portfolio/ilusion/data-sheets/" />
+    </div>
+
+    <section class="portfolio-section-content">
+
+        <h3>ILUSIÓN</h3>
+
+    <p>Ilusión es una empresa mexicana especializada en el diseño, fabricación y comercialización de moda íntima y prendas para mujer. Ha ampliado su oferta hacia ropa interior, lencería, ropa exterior, pijamas, calzado, accesorios, belleza y productos para hombre y niños.</p>
+
+        <p><strong>Mi participación</strong></p>
+
+        <ul>
+            <li>Desarrollo de artes para impresión en diferentes líneas de producto.</li>
+            <li>Adaptación de diseños a distintos modelos y formatos.</li>
+            <li>Preparación de archivos finales para producción, respetando la identidad visual de la marca.</li>
+            <li>Desarrollo de tech packs</li>
+        </ul>
+    </section>
+
+    <img class="image-photo" src={mainPhoto.src} />
+    <img class="image1" src={image1.src} />
 </BaseLayout>
+
+<style>
+    .submenu-wrapper {
+        position: absolute;
+        right: 25px;
+        top: 150px;
+    }
+
+    .image-photo {
+        position: absolute;
+        bottom: 0;
+        border-bottom-left-radius: 62px;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .portfolio-section-content {
+        position: absolute;
+        width: 336px;
+        height: 242px;
+        top: 223px;
+        left: 653px;
+
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    .image1 {
+        position: absolute;
+        right: 66px;
+        bottom: 60px;
+    }
+
+
+</style>

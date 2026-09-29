@@ -1,9 +1,89 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import SectionTitle from '../../../components/SectionTitle.astro';
+import ShowProjectButton from '../../../components/ShowProjectButton.astro';
+import mainPhoto from './images/main.webp';
+import image1 from './images/main1.webp';
+import image2 from './images/main2.webp';
 ---
 
 <BaseLayout>
     <SectionTitle title="portafolio" subtitle="puffin drinkwear" />
 
+    <div class="submenu-wrapper">
+        <ShowProjectButton link="/portfolio/puffin-drinkwear/sport/" />
+    </div>
+
+    <section class="portfolio-section-content">
+        <h3>PUFFIN DRINKWEAR</h3>
+
+        <p>
+            Puffin Drinkwear es una marca estadounidense especializada en fundas térmicas para latas, botellas y vasos, reconocida por transformar accesorios funcionales en productos con diseños creativos inspirados en prendas de vestir y actividades al aire libre.
+        </p>
+
+        <p><strong>Mi participación</strong></p>
+
+        <ul>
+            <li>Desarrollo de artes para impresión en diferentes líneas de producto.</li>
+            <li>Adaptación de diseños a distintos modelos y formatos.</li>
+            <li>Preparación de archivos finales para producción, respetando la identidad visual de la marca.</li>
+            <li>Desarrollo de fichas técnicas</li>
+            <li>Desarrollo de empaques</li>
+        </ul>
+
+        <ul>
+            <li><strong>Año 2020–2024</strong></li>
+            <li>Herramientas: Illustrator, Photoshop, RasterLink</li>
+        </ul>
+    </section>
+
+    <img class="image-photo" src={mainPhoto.src} />
+    <img class="image1" src={image1.src} />
+    <img class="image2" src={image2.src} />
 </BaseLayout>
+
+<style>
+    .submenu-wrapper {
+        position: absolute;
+        right: 25px;
+        top: 150px;
+    }
+
+    .image-photo {
+        position: absolute;
+        bottom: 0;
+        border-bottom-left-radius: 62px;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .portfolio-section-content {
+        position: absolute;
+        width: 389px;
+        height: 270px;
+        top: 157px;
+        left: 574px;
+
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    .image1, .image2 {
+        position: absolute;
+    }
+
+    .image1 {
+        right: 60px;
+        top: 218px;
+    }
+
+    .image2 {
+        bottom: 40px;
+        right: 69px;
+    }
+</style>

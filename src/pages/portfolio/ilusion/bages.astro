@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionTitle from '../../../components/SectionTitle.astro';
+
+import image1 from './images/bages1.webp';
+import image2 from './images/bages2.webp';
+import image3 from './images/bages3.webp';
+import image4 from './images/bages4.webp';
+import image5 from './images/bages5.webp';
+import InnerNavigation from '../../../components/InnerNavigation.astro';
+---
+
+<BaseLayout>
+    <SectionTitle title="portafolio" subtitle="ilusión" />
+
+    <InnerNavigation
+            prevLink="/portfolio/ilusion/data-sheets/"
+            nextLink="/portfolio/others"
+    />
+
+    <section class="portfolio-section-content">
+        <p>
+            Desarrollo de propuestas de producto para nuevos lanzamientos
+            colaborando con patronistas,
+            clientes y  muestristas .
+        </p>
+    </section>
+
+    <img class="image1" src={image1.src} />
+    <img class="image2" src={image2.src} />
+    <img class="image3" src={image3.src} />
+    <img class="image4" src={image4.src} />
+    <img class="image5" src={image5.src} />
+</BaseLayout>
+
+<style>
+    .portfolio-section-content {
+        position: absolute;
+        width: 437px;
+        height: 51px;
+        top: 244px;
+        left: 458px;
+
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    [class^="image"] {
+        position: absolute;
+    }
+
+    .image1 {
+        left: 34px;
+        top: 235px;
+    }
+
+    .image2 {
+        left: 514px;
+        top: 342px;
+    }
+
+    .image3 {
+        top: 253px;
+        right: 43px;
+    }
+
+    .image4 {
+        top: 548px;
+        left: 206px;
+    }
+
+    .image5 {
+        top: 624px;
+        right: 239px;
+    }
+</style>

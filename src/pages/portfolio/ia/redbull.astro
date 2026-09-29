@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionTitle from '../../../components/SectionTitle.astro';
+import InnerNavigation from '../../../components/InnerNavigation.astro';
+
+import image1 from './images/redbull1.webp';
+---
+
+<BaseLayout>
+    <SectionTitle title="portafolio" subtitle="Proyectos IA" />
+
+    <InnerNavigation
+            prevLink="/portfolio/ia/mundial/"
+            nextLink="/portfolio/"
+    />
+
+    <section class="portfolio-section-content">
+        <p>
+            Uso de IA para realizar productos promocionales para el mundial 2026
+        </p>
+    </section>
+
+    <img class="image1" src={image1.src} />
+</BaseLayout>
+
+<style>
+    .portfolio-section-content {
+        position: absolute;
+        width: 536px;
+        height: 105px;
+        left: 403px;
+        top: 237px;
+
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+
+        text-align: center;
+
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    [class^="image"] {
+        position: absolute;
+    }
+
+    .image1 {
+        left: 40px;
+        bottom: 40px;
+    }
+
+</style>

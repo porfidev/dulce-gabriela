@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionTitle from '../../../components/SectionTitle.astro';
+
+import image1 from './images/casual1.webp';
+import image2 from './images/casual2.webp';
+import InnerNavigation from '../../../components/InnerNavigation.astro';
+---
+
+<BaseLayout>
+    <SectionTitle title="portafolio" subtitle="puffin drinkwear" />
+
+    <InnerNavigation
+      prevLink="/portfolio/puffin-drinkwear/sport/"
+      nextLink="/portfolio/ilusion/"
+    />
+
+    <section class="portfolio-section-content">
+        <p>
+            Gestión del desarrollo de empaques con proveedores externos, desde la preparación y revisión de artes hasta la validación de muestras y aprobación final para producción.
+        </p>
+    </section>
+
+    <img class="image1" src={image1.src} />
+    <img class="image2" src={image2.src} />
+</BaseLayout>
+
+<style>
+    .submenu-wrapper {
+        position: absolute;
+        right: 25px;
+        top: 150px;
+    }
+
+    .portfolio-section-content {
+        position: absolute;
+        width: 409px;
+        height: 51px;
+        top: 264px;
+        left: 164px;
+
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    .image1, .image2 {
+        position: absolute;
+    }
+
+    .image1 {
+        left: 129px;
+        bottom: 20px;
+    }
+
+    .image2 {
+        right: 53px;
+        bottom: 89px;
+    }
+
+</style>

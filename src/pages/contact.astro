@@ -4,6 +4,27 @@ import SectionTitle from '../components/SectionTitle.astro';
 
 ---
 <BaseLayout>
-    <SectionTitle title="contacto" />
+    <SectionTitle title="contacto" subtitle="¿quieres que trabajemos juntos?"  />
 
+    <div class="circulo-gradiente"></div>
 </BaseLayout>
+
+<style>
+    .circulo-gradiente {
+        width: 706px;
+        height: 706px;
+        border-radius: 50%;
+        background: linear-gradient(
+          72.01deg,
+          rgba(213, 70, 242, 0.53) -6.77%,
+          rgba(214, 78, 241, 0.53) 30.66%,
+          rgba(255, 255, 255, 0.53) 91.11%
+        );
+
+        position: absolute;
+        bottom: -150px;
+        left: -150px;
+        z-index: 1;
+        transform: rotate(32deg);
+    }
+</style>

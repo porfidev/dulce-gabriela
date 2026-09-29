@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionTitle from '../../../components/SectionTitle.astro';
+import InnerNavigation from '../../../components/InnerNavigation.astro';
+
+import image1 from './images/mundial1.webp';
+import image2 from './images/mundial2.webp';
+---
+
+<BaseLayout>
+    <SectionTitle title="portafolio" subtitle="Proyectos IA" />
+
+    <InnerNavigation
+            prevLink="/portfolio/ia/"
+            nextLink="/portfolio/ia/redbull/"
+    />
+
+    <section class="portfolio-section-content">
+        <p>
+            Uso de IA para realizar productos promocionales para el mundial 2026
+        </p>
+    </section>
+
+    <p class="advice">
+        PRODUCTOS ADAPTADOS CON IA
+        PARA EL MUNDIAL
+    </p>
+
+    <img class="image1" src={image1.src} />
+    <img class="image2" src={image2.src} />
+</BaseLayout>
+
+<style>
+    .portfolio-section-content {
+        position: absolute;
+        width: 536px;
+        height: 105px;
+        left: 403px;
+        top: 237px;
+
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+
+        text-align: center;
+
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    .advice {
+
+        width: 232px;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+
+        position: absolute;
+        left: 93px;
+        bottom: 20px;
+    }
+
+    [class^="image"] {
+        position: absolute;
+    }
+
+    .image1 {
+        left: 62px;
+        bottom: 40px;
+    }
+
+    .image2 {
+        right: 47px;
+        bottom: 40px;
+    }
+</style>
